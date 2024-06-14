@@ -1,4 +1,3 @@
-
 create table regiao
 (
 	id serial primary key,
@@ -45,7 +44,6 @@ insert into grupos (nome) values ('Anquilossauros')
 insert into grupos (nome) values ('Ceratopsídeos')
 insert into grupos (nome) values ('Estegossauros')
 insert into grupos (nome) values ('Terápodes')
-
 select * from grupos
 
 
@@ -55,12 +53,10 @@ insert into descobridores (nome) values ('Cientistas Alemães')
 insert into descobridores (nome) values ('Museu Americano de História Natural')
 insert into descobridores (nome) values ('Othniel Charles Marsh')
 insert into descobridores (nome) values ('Barnum Brown')
-
 select * from descobridores
 
 insert into eras (nome) values ('Cretáceo')
 insert into eras (nome) values ('Jurássico')
-
 select * from eras
 
 insert into regiao (nome) values ('Mongólia')
@@ -69,6 +65,7 @@ insert into regiao (nome) values ('Tanzania')
 insert into regiao (nome) values ('China')
 insert into regiao (nome) values ('América do Norte')
 insert into regiao (nome) values ('USA')
+select * from regiao
 
 insert into dinossauros (nome) values ('Saichania')
 insert into dinossauros (nome) values ('Tricerátops')
@@ -77,8 +74,7 @@ insert into dinossauros (nome) values ('Pinacossauro')
 insert into dinossauros (nome) values ('Alossauro')
 insert into dinossauros (nome) values ('Torossauro')
 insert into dinossauros (nome) values ('Anquilossauro')
-
-SELECT * FROM dinossauros
+select * from dinossauros
 
 
 
