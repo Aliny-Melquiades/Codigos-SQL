@@ -69,7 +69,7 @@ create table categoria
 
 create table dependente
 (
-       fk_cod_cli int not null,
+        fk_cod_cli int not null,
 	fk_cod_dep int not null,
 	parentesco varchar(20) not null
 )
