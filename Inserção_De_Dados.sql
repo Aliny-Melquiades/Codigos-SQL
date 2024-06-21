@@ -79,7 +79,6 @@ INSERT INTO genero(cod_gen, nome) values ('3', 'Romance')
 INSERT INTO genero(cod_gen, nome) values ('4', 'Mistério')
 INSERT INTO genero(cod_gen, nome) values ('5', 'Terror')
 
-
 --CADASTRAR CATEGORIAS
 INSERT INTO categoria(cod_cat, nome, valor) values ('1', 'Infantil', '10')
 INSERT INTO categoria(cod_cat, nome, valor) values ('2', 'Comédia', '9')
@@ -88,27 +87,27 @@ INSERT INTO categoria(cod_cat, nome, valor) values ('4', 'Mistério', '15')
 INSERT INTO categoria(cod_cat, nome, valor) values ('5', 'Terror', '13')
 
 --CADASTRAR DEPENDENTE
-INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('1')
-INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('2')
-INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('3')
-INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('4')
-INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('5')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('1', '1', 'Irmã')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('2', '2', 'Esposa')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('3', '3', 'Tio')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('4', '4' 'Mãe')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('5', '5', 'Avó')
 
 --CADASTRAR ENDEREÇO
-INSERT INTO endereco
-INSERT INTO endereco
-INSERT INTO endereco
-INSERT INTO endereco
-INSERT INTO endereco
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
 
 --CADASTRAR CLIENTE COM ENDEREÇO
-INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values
-INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values
-INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values
+INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values ('1', '1')
+INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values ('1', '1')
+INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values ('1', '1')
 
 --CADASTRAR PROFISSÕES
-INSERT INTO profissao(cod_prod, nome) values
-INSERT INTO profissao(cod_prod, nome) values
-INSERT INTO profissao(cod_prod, nome) values
-INSERT INTO profissao(cod_prod, nome) values
-INSERT INTO profissao(cod_prod, nome) values
+INSERT INTO profissao(cod_prod, nome) values ('1', 'Desenvolvedor de Software')
+INSERT INTO profissao(cod_prod, nome) values ('2', 'Advogado')
+INSERT INTO profissao(cod_prod, nome) values ('3', 'Bancário')
+INSERT INTO profissao(cod_prod, nome) values ('4', 'Operador de Caixa')
+INSERT INTO profissao(cod_prod, nome) values ('5', 'Atendente de Cafeteria')
