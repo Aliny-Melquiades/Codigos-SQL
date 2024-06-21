@@ -44,8 +44,8 @@ create table filme_ator
 (
         fk_cod_ator int not null,
 	fk_cod_filme int not null,
-	ator char(1) not null,
-	diretor char(1) not null
+	ator varchar not null,
+	diretor varchar not null
 )
 
 create table ator
@@ -82,8 +82,8 @@ create table endereco
 	complemento varchar(20) not null,
 	cidade varchar(60) not null,
 	uf char(2) not null,
-	cep char(8) not null,
-	numero varchar(10) not null,
+	cep varchar(60) not null,
+	numero varchar(5) not null,
 	bairro varchar(60) null
 )
 
