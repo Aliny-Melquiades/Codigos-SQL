@@ -54,3 +54,61 @@ INSERT INTO locacao(cod_loc, data_loc, desconto, multa, sub_total, fk_cod_cli) v
 INSERT INTO locacao(cod_loc, data_loc, desconto, multa, sub_total, fk_cod_cli) values (20, '16-06-2024', 15, 5, 22.00, 20)
 
 select * from locacao
+
+--CADASTRAR DADOS DA LOCAÇÃO DE FILMES
+INSERT INTO locacao_filme(fk_cod_loc, fk_cod_filme, valor numeric, num_dias, data_devol) VALUES ('1', '3', '14.00', 7, '27-06-2024')
+INSERT INTO locacao_filme(fk_cod_loc, fk_cod_filme, valor numeric, num_dias, data_devol) VALUES ('2', '5', '14.00', 7, '28-06-2024')
+INSERT INTO locacao_filme(fk_cod_loc, fk_cod_filme, valor numeric, num_dias, data_devol) VALUES ('3', '7', '14.00', 7, '30-06-2024')
+INSERT INTO locacao_filme(fk_cod_loc, fk_cod_filme, valor numeric, num_dias, data_devol) VALUES ('4', '9', '14.00', 7, '15-06-2024')
+INSERT INTO locacao_filme(fk_cod_loc, fk_cod_filme, valor numeric, num_dias, data_devol) VALUES ('5', '11', '14.00', 7, '11-06-2024')
+
+--CADASTRAR ATORES COM SEUS FILMES
+INSERT INTO  filme_ator(fk_cod_ator, fk_cod_filme, ator, diretor) values ('1', '5', 'Eddie Murphy', 'Andrew Adamson')
+INSERT INTO  filme_ator(fk_cod_ator, fk_cod_filme, ator, diretor) values ('2', '8', 'Judy Garland', 'Victor Fleming')
+INSERT INTO  filme_ator(fk_cod_ator, fk_cod_filme, ator, diretor) values ('3', '9', 'Alexander Gould', 'Andrew Stanton')
+
+--CADASTRAR ATORES
+INSERT INTO ator(cod_ator, nome) values ('1', 'Eddie Murphy')
+INSERT INTO ator(cod_ator, nome) values ('2', 'Judy Garland')
+INSERT INTO ator(cod_ator, nome) values ('3', 'Alexander Gould')
+
+--CADASTRAR GENEROS
+INSERT INTO genero(cod_gen, nome) values ('1', 'Infantil')
+INSERT INTO genero(cod_gen, nome) values ('2', 'Comédia')
+INSERT INTO genero(cod_gen, nome) values ('3', 'Romance')
+INSERT INTO genero(cod_gen, nome) values ('4', 'Mistério')
+INSERT INTO genero(cod_gen, nome) values ('5', 'Terror')
+
+
+--CADASTRAR CATEGORIAS
+INSERT INTO categoria(cod_cat, nome, valor) values ('1', 'Infantil', '10')
+INSERT INTO categoria(cod_cat, nome, valor) values ('2', 'Comédia', '9')
+INSERT INTO categoria(cod_cat, nome, valor) values ('3', 'Romance', '12')
+INSERT INTO categoria(cod_cat, nome, valor) values ('4', 'Mistério', '15')
+INSERT INTO categoria(cod_cat, nome, valor) values ('5', 'Terror', '13')
+
+--CADASTRAR DEPENDENTE
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('1')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('2')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('3')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('4')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('5')
+
+--CADASTRAR ENDEREÇO
+INSERT INTO endereco
+INSERT INTO endereco
+INSERT INTO endereco
+INSERT INTO endereco
+INSERT INTO endereco
+
+--CADASTRAR CLIENTE COM ENDEREÇO
+INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values
+INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values
+INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values
+
+--CADASTRAR PROFISSÕES
+INSERT INTO profissao(cod_prod, nome) values
+INSERT INTO profissao(cod_prod, nome) values
+INSERT INTO profissao(cod_prod, nome) values
+INSERT INTO profissao(cod_prod, nome) values
+INSERT INTO profissao(cod_prod, nome) values
