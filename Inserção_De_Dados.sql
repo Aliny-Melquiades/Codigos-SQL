@@ -62,15 +62,21 @@ INSERT INTO locacao_filme(fk_cod_loc, fk_cod_filme, valor numeric, num_dias, dat
 INSERT INTO locacao_filme(fk_cod_loc, fk_cod_filme, valor numeric, num_dias, data_devol) VALUES ('4', '9', '14.00', 7, '15-06-2024')
 INSERT INTO locacao_filme(fk_cod_loc, fk_cod_filme, valor numeric, num_dias, data_devol) VALUES ('5', '11', '14.00', 7, '11-06-2024')
 
+select * from locacao_filme
+
 --CADASTRAR ATORES COM SEUS FILMES
 INSERT INTO  filme_ator(fk_cod_ator, fk_cod_filme, ator, diretor) values ('1', '5', 'Eddie Murphy', 'Andrew Adamson')
 INSERT INTO  filme_ator(fk_cod_ator, fk_cod_filme, ator, diretor) values ('2', '8', 'Judy Garland', 'Victor Fleming')
 INSERT INTO  filme_ator(fk_cod_ator, fk_cod_filme, ator, diretor) values ('3', '9', 'Alexander Gould', 'Andrew Stanton')
 
+select * from filme_ator
+
 --CADASTRAR ATORES
 INSERT INTO ator(cod_ator, nome) values ('1', 'Eddie Murphy')
 INSERT INTO ator(cod_ator, nome) values ('2', 'Judy Garland')
 INSERT INTO ator(cod_ator, nome) values ('3', 'Alexander Gould')
+
+select * from ator
 
 --CADASTRAR GENEROS
 INSERT INTO genero(cod_gen, nome) values ('1', 'Infantil')
@@ -79,6 +85,8 @@ INSERT INTO genero(cod_gen, nome) values ('3', 'Romance')
 INSERT INTO genero(cod_gen, nome) values ('4', 'Mistério')
 INSERT INTO genero(cod_gen, nome) values ('5', 'Terror')
 
+select * from genero
+
 --CADASTRAR CATEGORIAS
 INSERT INTO categoria(cod_cat, nome, valor) values ('1', 'Infantil', '10')
 INSERT INTO categoria(cod_cat, nome, valor) values ('2', 'Comédia', '9')
@@ -86,28 +94,38 @@ INSERT INTO categoria(cod_cat, nome, valor) values ('3', 'Romance', '12')
 INSERT INTO categoria(cod_cat, nome, valor) values ('4', 'Mistério', '15')
 INSERT INTO categoria(cod_cat, nome, valor) values ('5', 'Terror', '13')
 
+select * from categoria
+
 --CADASTRAR DEPENDENTE
 INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('1', '1', 'Irmã')
 INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('2', '2', 'Esposa')
 INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('3', '3', 'Tio')
-INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('4', '4' 'Mãe')
+INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('4', '4', 'Mãe')
 INSERT INTO dependente(fk_cod_cli, fk_cod_dep, parentesco) values ('5', '5', 'Avó')
 
+select * from dependente
+
 --CADASTRAR ENDEREÇO
-INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
-INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
-INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
-INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
-INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values ('123', 'Rua Vereador Valdir Araújo', 'Rua', 'Cancun V', 'Apucarana', 'PR', '86082-062', '505', 'Ouro Verde')
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values ('854', 'Rua Natalício Euzébio', 'Rua', 'Casa dos Fundos', 'Maringá', 'PR', '86096-854', '111', 'Serra da Lagoa')
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values ('741', 'Rua das Flores', 'Rua', 'Residencial Orquídea', 'Sertanópolis', 'PR', '86011-632', '85', 'Flor de Lótus')
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values ('523', 'Rua Gardeman', 'Rua', 'Sem Complemento', 'Rolândia', 'PR', '86085-526', '32', 'Imagawa')
+INSERT INTO endereco(cod_end, logradouro, tipo_log, complemento, cidade, uf, cep, numero, bairro) values ('121', 'Rua Genivaldo Domingues', 'Rua', 'Casa da Frente', 'Ibiporã', 'PR', '86082-222', '11', 'Parigot')
+
+select * from endereco
 
 --CADASTRAR CLIENTE COM ENDEREÇO
 INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values ('1', '1')
 INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values ('1', '1')
 INSERT INTO cli_endereco(fk_cod_end, fk_cod_cli) values ('1', '1')
 
+select * from cli_endereco
+
 --CADASTRAR PROFISSÕES
-INSERT INTO profissao(cod_prod, nome) values ('1', 'Desenvolvedor de Software')
-INSERT INTO profissao(cod_prod, nome) values ('2', 'Advogado')
-INSERT INTO profissao(cod_prod, nome) values ('3', 'Bancário')
-INSERT INTO profissao(cod_prod, nome) values ('4', 'Operador de Caixa')
-INSERT INTO profissao(cod_prod, nome) values ('5', 'Atendente de Cafeteria')
+INSERT INTO profissao(cod_prof, nome) values ('1', 'Desenvolvedor de Software')
+INSERT INTO profissao(cod_prof, nome) values ('2', 'Advogado')
+INSERT INTO profissao(cod_prof, nome) values ('3', 'Bancário')
+INSERT INTO profissao(cod_prof, nome) values ('4', 'Operador de Caixa')
+INSERT INTO profissao(cod_prof, nome) values ('5', 'Atendente de Cafeteria')
+
+select * from profissao
