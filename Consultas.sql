@@ -44,26 +44,21 @@ SELECT nome, data_devol FROM clientes, locacao_filme
       WHERE titulo = 'Toy Story'
 
 -- Exibir a lista de clientes com multas superiores a um valor específico.
-
-
+SELECT nome, multa FROM clientes
+   INNER JOIN locacao ON multa = multa
+      WHERE multa > 4;
 
 -- Listar todas as locações feitas em um período específico.
-
+SELECT data_loc FROM locacao
+   WHERE data_loc BETWEEN '2024-06-15' AND '2024-06-30';
 
 
 -- Obter a quantidade total de filmes alugados por cada cliente. (DESAFIO)
 
-
-
 -- Listar os clientes e os filmes que eles alugaram, ordenados por data de locação
-
-
 .
 -- Mostrar todos os clientes que moram em uma cidade específica e que alugaram filmes de uma categoria específica.
-
 	
 -- Encontrar todos os atores que participaram de pelo menos 5 filmes, listando o nome do ator e o número de filmes em que atuou. (DESAFIO)
-
-
 	
 -- Exibir a quantidade total de filmes alugados por categoria e gênero, incluindo apenas as categorias e gêneros que têm mais de 5 filmes alugados no total (DESAFIO)
