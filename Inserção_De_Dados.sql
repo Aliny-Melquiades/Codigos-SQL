@@ -61,9 +61,9 @@ INSERT INTO locacao(codigo_locacao, data_locacao, desconto, multa, sub_total, fk
 select * from locacao
 
 --CADASTRAR DADOS DA LOCAÇÃO DE FILMES
-INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('1', '3', '14.00', 7, '27-06-2024')
-INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('1', '3', '14.00', 7, '27-06-2024')
-INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('1', '3', '14.00', 7, '27-06-2024')
+INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('15', '1', '10', '15-06-2024', '22-06-2024')
+INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('16', '2', '10', '05-06-2024', '12-06-2024')
+INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('17', '3', '10', '18-05-2024', '25-05-2024')
 
 select * from locacao_filme
 
@@ -117,10 +117,10 @@ INSERT INTO cliente_endereco(fk_codigo_endereco, fk_codigo_cliente) values ('1',
 select * from cliente_endereco
 
 --CADASTRAR PROFISSÕES
-INSERT INTO profissao(nome_profissao) values ('Desenvolvedor de Software')
-INSERT INTO profissao(nome_profissao) values ('Desenvolvedor de Software')
-INSERT INTO profissao(nome_profissao) values ('Desenvolvedor de Software')
-INSERT INTO profissao(nome_profissao) values ('Desenvolvedor de Software')
-INSERT INTO profissao(nome_profissao) values ('Desenvolvedor de Software')
+INSERT INTO profissao(nome_profissao) values ('Desenvolvedor')
+INSERT INTO profissao(nome_profissao) values ('Advogado')
+INSERT INTO profissao(nome_profissao) values ('Engenheiro')
+INSERT INTO profissao(nome_profissao) values ('Motorista')
+INSERT INTO profissao(nome_profissao) values ('Padeiro')
 
 select * from profissao
