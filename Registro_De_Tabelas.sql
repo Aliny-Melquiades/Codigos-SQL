@@ -55,13 +55,13 @@ create table ator
 create table genero
 (
 	codigo_genero int primary key,
-	nome varchar not null
+	nome_genero varchar not null
 )
 
 create table categoria
 (
         codigo_categoria int primary key,
-	nome varchar not null
+	nome_categoria varchar not null
 )
 
 create table dependente
