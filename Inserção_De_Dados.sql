@@ -109,7 +109,7 @@ select * from dependente
 --CADASTRAR ENDEREÇO
 INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('111', 'Rua Vereador Valdir Araújo', 'Cancun V', 'Apucarana', 'PR', '86266-87', '505', 'Ouro Verde')
 INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('222', 'Rua Maria Gardeman', 'Casa Dos Fundos', 'Londrina', 'PR', '86976-56', '3434', 'Coliseu')
-INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('333', 'Rua das Flores', , 'Apucarana', 'PR', '84567-89', '78', 'Vila Rica')
+INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('333', 'Rua das Flores', 'Sem Complemento', 'Apucarana', 'PR', '84567-89', '78', 'Vila Rica')
 
 select * from endereco
 
