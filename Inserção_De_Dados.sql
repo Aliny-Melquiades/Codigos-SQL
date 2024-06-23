@@ -68,16 +68,16 @@ INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locaca
 select * from locacao_filme
 
 --CADASTRAR ATORES COM SEUS FILMES
-INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '5', 'Eddie Murphy', 'Andrew Adamson')
-INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '5', 'Eddie Murphy', 'Andrew Adamson')
-INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '5', 'Eddie Murphy', 'Andrew Adamson')
+INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '10', 'Alex Wolff', 'Ari Aster')
+INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '16', 'Emilia Clarke', 'Thea Sharrock')
+INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '20', 'Anthony Hopkins', 'Jonathan Demme')
 
 select * from filme_ator
 
 --CADASTRAR ATORES
-INSERT INTO ator(codigo_ator, nome_ator) values ('1', 'Eddie Murphy')
-INSERT INTO ator(codigo_ator, nome_ator) values ('2', 'Judy Garland')
-INSERT INTO ator(codigo_ator, nome_ator) values ('3', 'Alexander Gould')
+INSERT INTO ator(codigo_ator, nome_ator) values ('1', 'Alex Wolff')
+INSERT INTO ator(codigo_ator, nome_ator) values ('2', 'Emilia Clarke')
+INSERT INTO ator(codigo_ator, nome_ator) values ('3', 'Anthony Hopkins')
 
 select * from ator
 
@@ -100,9 +100,9 @@ INSERT INTO categoria(codigo_categoria, nome_categoria) values (5, 'Comédia')
 select * from categoria
 
 --CADASTRAR DEPENDENTE
-INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', '1', 'Irmã')
-INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', '1', 'Irmã')
-INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', '1', 'Irmã')
+INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', 'Luisa', 'Irmã')
+INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', 'Adalberto', 'Primo')
+INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', 'Alice', 'Mãe')
 
 select * from dependente
 
