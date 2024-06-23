@@ -2,102 +2,97 @@ CREATE DATABASE LOCADORA
 
 create table filmes
 (
-	cod_filme int primary key,
-	titulo_original varchar(100) not null,
+	codigo_filme int primary key,
 	titulo varchar(100) not null,
 	quantidade int not null,
-	fk_cod_cat int not null,
-	fk_cod_gen int not null
+	fk_codigo_categoria int not null,
+	fk_codigo_genero int not null
 )
 
 create table clientes
 (
-        cod_cli int primary key,
-	cpf char(11) not null,
-	nome varchar(60) not null,
-	telefone varchar(10) not null,
-	fk_cod_prof int not null
+        codigo_cliente int primary key,
+	cpf varchar not null,
+	nome varchar not null,
+	telefone varchar not null,
+	fk_nome_profissao varchar not null
 	
 )
 
 create table locacao_filme
 (
-        fk_cod_loc int not null,
-        fk_cod_filme int not null,
-        valor numeric(15,2) not null,
-	num_dias int not null,
-	data_devol date not null
+        fk_codigo_locacao int not null,
+        fk_codigo_filme int not null,
+        valor money not null,
+	data_locacao date not null,
+	data_devolucao date not null
 )
 
 create table locacao
 (
-        cod_loc int primary key,
-	data_loc date not null,
-	desconto numeric(15,2) not null,
-	multa numeric(15,2) not null,
-	sub_total numeric(15,2)not null,
-	fk_cod_cli int not null	
-	foreign key (fk_cod_cli) references cliente(cod_cli)
+        codigo_locacao int primary key,
+	data_locacao date not null,
+	desconto money not null,
+	multa money not null,
+	sub_total money not null,
+	fk_codigo_cliente int not null	
 )
 
 create table filme_ator
 (
-        fk_cod_ator int not null,
-	fk_cod_filme int not null,
+        fk_codigo_ator int not null,
+	fk_codigo_filme int not null,
 	ator varchar not null,
 	diretor varchar not null
 )
 
 create table ator
 (
-        cod_ator int primary key,
-	nome varchar(60) not null
+        codigo_ator int primary key,
+	nome_ator varchar not null
 )
 
 create table genero
 (
-	cod_gen int primary key,
-	nome varchar(60) not null
+	codigo_genero int primary key,
+	nome varchar not null
 )
 
 create table categoria
 (
-        cod_cat int not null,
-	nome varchar(60) not null,
-	valor numeric(15,2) not null
+        codigo_categoria int primary key,
+	nome varchar not null
 )
 
 create table dependente
 (
-        fk_cod_cli int not null,
-	fk_cod_dep int not null,
-	parentesco varchar(20) not null
+        fk_codigo_cliente int not null,
+	nome_dependente varchar not null,
+	parentesco varchar not null
 )
 
 create table endereco
 (
-        cod_end int primary key,
+        codigo_endereco int primary key,
 	logradouro varchar(40) not null,
-	tipo_log varchar(40) not null,
-	complemento varchar(20) not null,
-	cidade varchar(60) not null,
-	uf char(2) not null,
-	cep varchar(60) not null,
+	complemento varchar(40) not null,
+	cidade varchar(20) not null,
+	uf varchar(2) not null,
+	cep varchar(20) not null,
 	numero varchar(5) not null,
-	bairro varchar(60) null
+	bairro varchar(20) not null
 )
 
-create table cli_endereco
+create table cliente_endereco
 (
-       fk_cod_end int not null,
-       fk_cod_cli int not null
+       fk_codigo_endereco int not null,
+       fk_codigo_cliente int not null
 	
 )
 
 create table profissao
 (
-	cod_prof int primary key not null,
-	nome varchar(60) not null
+	nome_profissao varchar(60) not null
 )
 
 
