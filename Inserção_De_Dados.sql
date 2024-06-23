@@ -82,16 +82,20 @@ INSERT INTO ator(codigo_ator, nome_ator) values ('3', 'Alexander Gould')
 select * from ator
 
 --CADASTRAR GENEROS
-INSERT INTO genero(codigo_genero, nome_genero) values ('1', 'Infantil')
-INSERT INTO genero(codigo_genero, nome_genero) values ('1', 'Infantil')
-INSERT INTO genero(codigo_genero, nome_genero) values ('1', 'Infantil')
+INSERT INTO genero(codigo_genero, nome_genero) values (1, 'Infantil')
+INSERT INTO genero(codigo_genero, nome_genero) values (2, 'Romance')
+INSERT INTO genero(codigo_genero, nome_genero) values (3, 'Terror')
+INSERT INTO genero(codigo_genero, nome_genero) values (4, 'Mistério')
+INSERT INTO genero(codigo_genero, nome_genero) values (5, 'Comédia')
 
 select * from genero
 
 --CADASTRAR CATEGORIAS
-INSERT INTO categoria(codigo_categoria, nome_categoria) values ('1', 'Infantil')
-INSERT INTO categoria(codigo_categoria, nome_categoria) values ('1', 'Infantil')
-INSERT INTO categoria(codigo_categoria, nome_categoria) values ('1', 'Infantil')
+INSERT INTO categoria(codigo_categoria, nome_categoria) values (1, 'Infantil')
+INSERT INTO categoria(codigo_categoria, nome_categoria) values (2, 'Romance')
+INSERT INTO categoria(codigo_categoria, nome_categoria) values (3, 'Terror')
+INSERT INTO categoria(codigo_categoria, nome_categoria) values (4, 'Mistério')
+INSERT INTO categoria(codigo_categoria, nome_categoria) values (5, 'Comédia')
 
 select * from categoria
 
