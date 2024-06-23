@@ -8,6 +8,7 @@ Nesse repositótrio está o Banco de Dados de uma Locadora de Filmes feito em SQ
 ![image](https://github.com/Aliny-Melquiades/Locadora-Filmes/assets/124331239/493ce5f3-11a3-4591-a4f6-b36981a4203e)
 
 ### Tabela Locação
-![image](https://github.com/Aliny-Melquiades/Locadora-Filmes/assets/124331239/38440239-2464-4dc4-99b9-9cfe236c5ef3)
+![image](https://github.com/Aliny-Melquiades/Locadora-Filmes/assets/124331239/f56823e8-6018-4a7c-9f07-50386923b777)
+
 
 
