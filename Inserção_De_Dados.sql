@@ -107,16 +107,16 @@ INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('
 select * from dependente
 
 --CADASTRAR ENDEREÇO
-INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('123', 'Rua Vereador Valdir Araújo', 'Rua', 'Cancun V', 'Apucarana', 'PR', '86082-062', '505', 'Ouro Verde')
-INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('123', 'Rua Vereador Valdir Araújo', 'Rua', 'Cancun V', 'Apucarana', 'PR', '86082-062', '505', 'Ouro Verde')
-INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('123', 'Rua Vereador Valdir Araújo', 'Rua', 'Cancun V', 'Apucarana', 'PR', '86082-062', '505', 'Ouro Verde')
+INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('111', 'Rua Vereador Valdir Araújo', 'Cancun V', 'Apucarana', 'PR', '86266-87', '505', 'Ouro Verde')
+INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('222', 'Rua Maria Gardeman', 'Casa Dos Fundos', 'Londrina', 'PR', '86976-56', '3434', 'Coliseu')
+INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, numero, bairro) values ('333', 'Rua das Flores', , 'Apucarana', 'PR', '84567-89', '78', 'Vila Rica')
 
 select * from endereco
 
 --CADASTRAR CLIENTE COM ENDEREÇO
-INSERT INTO cliente_endereco(fk_codigo_endereco, fk_codigo_cliente) values ('1', '1')
-INSERT INTO cliente_endereco(fk_codigo_endereco, fk_codigo_cliente) values ('1', '1')
-INSERT INTO cliente_endereco(fk_codigo_endereco, fk_codigo_cliente) values ('1', '1')
+INSERT INTO cliente_endereco(codigo_endereco, codigo_cliente) values ('111', '11')
+INSERT INTO cliente_endereco(codigo_endereco, codigo_cliente) values ('222', '12')
+INSERT INTO cliente_endereco(codigo_endereco, codigo_cliente) values ('333', '13')
 
 select * from cliente_endereco
 
