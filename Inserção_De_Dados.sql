@@ -23,17 +23,17 @@ INSERT INTO filmes(codigo_filme, titulo, quantidade, fk_codigo_categoria, fk_cod
 select * from filmes
 
 --CADASTRO DE CLIENTES
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (11, 01287654609, 'Marcos', 43996964545, 'Engenheiro')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (12, 04576854321, 'Ana', 43999998778, 'Advogado')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (13, 09765432120, 'Caio', 11998664545, 'Motorista')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (14, 08643247689, 'Aliny', 11996964889, 'Desenvolvedor')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (15, 01145258405, 'Felipe', 61996968788, 'Engenheiro')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (16, 19865434578, 'Larissa', 61996965767, 'Motorista')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (17, 16756542398, 'Aparecida', 43996987888, 'Padeiro')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (18, 12376578909, 'Matheus', 43888864545, 'Advogado')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (19, 17654321356, 'Lucas', 43996998989, 'Engenheiro')
-INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, fk_nome_profissao) values (20, 12487609765, 'Maria', 43996080897, 'Desenvolvedor')
-	
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (11, 01287654609, 'Marcos', 43996964545, 'Engenheiro')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (12, 04576854321, 'Ana', 43999998778, 'Advogado')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (13, 09765432120, 'Caio', 11998664545, 'Motorista')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (14, 08643247689, 'Aliny', 11996964889, 'Desenvolvedor')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (15, 01145258405, 'Felipe', 61996968788, 'Engenheiro')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (16, 19865434578, 'Larissa', 61996965767, 'Motorista')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (17, 16756542398, 'Aparecida', 43996987888, 'Padeiro')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (18, 12376578909, 'Matheus', 43888864545, 'Advogado')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (19, 17654321356, 'Lucas', 43996998989, 'Engenheiro')
+INSERT INTO clientes(codigo_cliente, cpf, nome, telefone, nome_profissao) values (20, 12487609765, 'Maria', 43996080897, 'Desenvolvedor')
+
 select * from clientes
 
 --CADASTRO DAS LOCAÇÕES
@@ -61,16 +61,16 @@ INSERT INTO locacao(codigo_locacao, data_locacao, desconto, multa, sub_total, fk
 select * from locacao
 
 --CADASTRAR DADOS DA LOCAÇÃO DE FILMES
-INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('15', '1', '10', '15-06-2024', '22-06-2024')
-INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('16', '2', '10', '05-06-2024', '12-06-2024')
-INSERT INTO locacao_filme(fk_codigo_locacao, fk_codigo_filme, valor, data_locacao, data_devolucao) VALUES ('17', '3', '10', '18-05-2024', '25-05-2024')
+INSERT INTO locacao_filme(codigo_locacao,codigo_filme, valor, data_locacao, data_devolucao) VALUES ('15', '1', '10', '15-06-2024', '22-06-2024')
+INSERT INTO locacao_filme(codigo_locacao, codigo_filme, valor, data_locacao, data_devolucao) VALUES ('16', '2', '10', '05-06-2024', '12-06-2024')
+INSERT INTO locacao_filme(codigo_locacao, codigo_filme, valor, data_locacao, data_devolucao) VALUES ('17', '3', '10', '18-05-2024', '25-05-2024')
 
 select * from locacao_filme
 
 --CADASTRAR ATORES COM SEUS FILMES
-INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '10', 'Alex Wolff', 'Ari Aster')
-INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '16', 'Emilia Clarke', 'Thea Sharrock')
-INSERT INTO  filme_ator(fk_codigo_ator, fk_codigo_filme, ator, diretor) values ('1', '20', 'Anthony Hopkins', 'Jonathan Demme')
+INSERT INTO  filme_ator(codigo_ator, codigo_filme, ator, diretor) values ('1', '10', 'Alex Wolff', 'Ari Aster')
+INSERT INTO  filme_ator(codigo_ator, codigo_filme, ator, diretor) values ('1', '16', 'Emilia Clarke', 'Thea Sharrock')
+INSERT INTO  filme_ator(codigo_ator, codigo_filme, ator, diretor) values ('1', '20', 'Anthony Hopkins', 'Jonathan Demme')
 
 select * from filme_ator
 
@@ -100,9 +100,9 @@ INSERT INTO categoria(codigo_categoria, nome_categoria) values (5, 'Comédia')
 select * from categoria
 
 --CADASTRAR DEPENDENTE
-INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', 'Luisa', 'Irmã')
-INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', 'Adalberto', 'Primo')
-INSERT INTO dependente(fk_codigo_cliente, nome_dependente, parentesco) values ('1', 'Alice', 'Mãe')
+INSERT INTO dependente(codigo_cliente, nome_dependente, parentesco) values ('1', 'Luisa', 'Irmã')
+INSERT INTO dependente(codigo_cliente, nome_dependente, parentesco) values ('1', 'Adalberto', 'Primo')
+INSERT INTO dependente(codigo_cliente, nome_dependente, parentesco) values ('1', 'Alice', 'Mãe')
 
 select * from dependente
 
@@ -114,9 +114,9 @@ INSERT INTO endereco(codigo_endereco, logradouro, complemento, cidade, uf, cep, 
 select * from endereco
 
 --CADASTRAR CLIENTE COM ENDEREÇO
-INSERT INTO cliente_endereco(codigo_endereco, codigo_cliente) values ('111', '11')
-INSERT INTO cliente_endereco(codigo_endereco, codigo_cliente) values ('222', '12')
-INSERT INTO cliente_endereco(codigo_endereco, codigo_cliente) values ('333', '13')
+INSERT INTO cliente_endereco(fk_codigo_endereco, fk_codigo_cliente) values ('111', '11')
+INSERT INTO cliente_endereco(fk_codigo_endereco, fk_codigo_cliente) values ('222', '12')
+INSERT INTO cliente_endereco(fk_codigo_endereco, fk_codigo_cliente) values ('333', '13')
 
 select * from cliente_endereco
 
@@ -128,3 +128,4 @@ INSERT INTO profissao(nome_profissao) values ('Motorista')
 INSERT INTO profissao(nome_profissao) values ('Padeiro')
 
 select * from profissao
+
